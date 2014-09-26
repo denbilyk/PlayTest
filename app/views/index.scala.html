@@ -1,0 +1,22 @@
+@(message: String)
+
+@main("First Play Application") {
+
+    <script type="text/javascript" src='@routes.Assets.at("js/index.js")'></script>
+
+    Users: <br>
+    <ul id="users"></ul>
+
+    <form action="@routes.Application.addUser()" method="post">
+        <label>
+            User name:
+            <input type="text" name="name">
+        </label>
+        <label>
+            Email:
+            <input type="text" name="email">
+        </label>
+        <button type="submit">Add user</button>
+    </form>
+
+}
